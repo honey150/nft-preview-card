@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+
+   <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section class="crypto-card">
+      <div class="crypto-card__img">
+        <img src="./images/image-equilibrium.jpg" alt="cryptocard hero image">
+        <div class="view-img">
+          <img class="eye-icon" src="./images/icon-view.svg" alt="view icon">
+        </div>
+      </div>
+      <div class="crypto-card__description">
+        <div class="crypto-card__title">Equilibrium #3429</div>
+        <div class="crypto-card__para">
+          Our Equilibrium collection promotes balance and calm.
+        </div>
+        <div class="crypto-type">
+          <div class="eth-crypto">
+            <span
+              ><img src="./images/icon-ethereum.svg" alt="icon-ethereum"
+            /></span>
+            <span>0.041ETH</span>
+          </div>
+          <div class="time-left">
+            <span><img src="./images/icon-clock.svg" alt="clock-icon" /></span>
+            <span>3 <span class="days-count">days left</span></span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="crypto-card__designer">
+          <img src="./images/image-avatar.png" alt="card avatar image">
+          <p><span>Creation of</span> Jules Wyvern</p>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a target="_blank" href="https://www.frontendmentor.io/profile/honey150">Navdeep Sharma</a>.
+    </div>
+
+    <script>
+
+      let cardImage = document.querySelector(".crypto-card__img")
+      let viewIcon = document.querySelector(".view-img");
+      cardImage.addEventListener("click", () => {
+        viewIcon.classList.add("active")
+        viewIcon.classList.remove("unactive")
+        
+      })
+
+      viewIcon.addEventListener("click", (e) => {
+        e.stopPropagation();
+        console.log("view icon cliked")
+        viewIcon.classList.add("unactive")
+        viewIcon.classList.remove("active")
+      })
+
+    </script>
+  </body>
+</html>
